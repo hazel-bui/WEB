@@ -1,0 +1,68 @@
+<div class="blog-container">
+  <h1>LATEST ARTICLES</h1>
+
+  <!-- Blog List View -->
+  <div *ngIf="!selectedPost" class="blog-list">
+    <div class="blog-list-content">
+      <div class="blog-sidebar-wrapper">
+        <div class="blog-sidebar">
+          <div class="blog-sidebar-frame">
+            <h3 style="text-align: center;">LATEST POST</h3>
+              <div *ngFor="let post of blogPosts.slice(0,3)" class="blog-sidebar-item" (click)="selectPost(post)">
+                  <img [src]="post.Blog_Image" [alt]="post.Blog_Title">
+                  <h3>{{ post.Blog_Title }}</h3>
+              </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="blog-main-content">
+        <div *ngFor="let post of blogPosts" class="main-article" (click)="selectPost(post)">
+          <div class="main-article-image">
+            <img [src]="post.Blog_Image" [alt]="post.Blog_Title">
+          </div>
+          <div class="main-article-details">
+            <h2>{{ post.Blog_Title }}</h2>
+            <p>{{ post.Blog_shortDescription }}</p>
+            <span class="blog-date">Posted on {{ post.Blog_Date }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog Post View -->
+  <div *ngIf="selectedPost" class="blog-post">
+    <div class="blog-list-content">
+      <div class="blog-sidebar-wrapper">
+        <div class="blog-sidebar">
+          <div class="blog-sidebar-frame">
+            <h3 style="text-align: center;">LATEST POST</h3>
+              <div *ngFor="let post of blogPosts.slice(0,3)" class="blog-sidebar-item" (click)="selectPost(post)">
+                  <img [src]="post.Blog_Image" [alt]="post.Blog_Title">
+                  <h3>{{ post.Blog_Title }}</h3>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-main-content">
+        <button class="back-btn" (click)="backToBlogList()">‹ Back to Blog List</button>
+        
+        <div class="post-header">
+          <h1>{{ selectedPost.Blog_Title }}</h1>
+          <span class="post-date">Posted on {{ selectedPost.Blog_Date }}</span>
+        </div>
+      <br/>
+        <div class="post-image">
+          <img [src]="selectedPost.Blog_Image" [alt]="selectedPost.Blog_Title">
+        </div>
+
+        <div class="post-content">
+          <p>{{ selectedPost.Blog_shortDescription }}</p>
+          <div class="full-content" [innerHTML]="selectedPost?.Blog_fullContent"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,237 @@
+/* 📌 Blog Container */
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  border-radius: 20px;
+  background:  #ECE9C1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 📌 Blog Header */
+h1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #3A3812;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+/* 📌 Blog Content Layout */
+.blog-list-content {
+  display: flex;
+  gap: 30px;
+  border-radius: 15px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 📌 Sidebar */
+.blog-sidebar {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blog-sidebar-frame {
+  border-radius: 15px;
+  padding: 5px;
+  background: linear-gradient(135deg, #E6E2AD, #E6E2AD);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+/* 📌 Sidebar Items */
+.blog-sidebar-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-sidebar-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.blog-sidebar-item img {
+  width: 90px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.blog-sidebar-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3A3812;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 📌 Main Blog Content */
+.blog-main-content {
+  flex-grow: 1;
+}
+
+/* 📌 Article Cards */
+.main-article {
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.main-article:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.main-article-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.main-article-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.main-article:hover .main-article-image img {
+  transform: scale(1.1);
+}
+
+.main-article-details {
+  padding: 20px;
+}
+
+.main-article-details h2 {
+  margin: 0 0 15px;
+  font-size: 1.5rem;
+  color: #3A3812;
+}
+
+.main-article-details .blog-date {
+  color: #716C23;
+  font-size: 0.9rem;
+}
+
+/* 📌 Blog Post View */
+.blog-post .blog-list-content {
+  margin-top: 20px;
+}
+
+.post-header h1 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #3A3812;
+}
+
+.post-date {
+  color: #716C23;
+  font-size: 0.9rem;
+}
+
+.post-image {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+.post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* 📌 Buttons & Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 12px;
+}
+
+.page-btn,
+.back-btn {
+  background: #f3efc1;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.page-btn:hover,
+.back-btn:hover {
+  background:  #CDC65F;
+  transform: scale(1.05);
+}
+
+.current-page {
+  background-color: #D9D9D9;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+/* 📌 Responsive Design */
+@media (max-width: 1024px) {
+  .blog-list-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .blog-sidebar {
+      width: 100%;
+      align-items: center;
+  }
+
+  .blog-main-content {
+      width: 100%;
+  }
+
+  .main-article-image {
+      height: 220px;
+  }
+
+  .post-image {
+      height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-container {
+      padding: 30px;
+  }
+
+  .post-image {
+      height: 250px;
+  }
+
+  .main-article-details h2 {
+      font-size: 1.3rem;
+  }
+}
