@@ -59,10 +59,16 @@
             <div class="col-md-3">
                 <h3 class="text-uppercase border-bottom border-warning pb-2">Stay Updated</h3>
                 <p>Subscribe to our newsletter to get the latest updates.</p>
-                <form class="d-flex">
-                    <input type="email" class="form-control me-2" placeholder="Enter your email" required>
-                    <button type="submit" class="btn custom-subscribe-btn">Subscribe</button>
-                </form>
+                <div *ngIf="!isSubscribed">
+                    <form (submit)="subscribe($event)" class="d-flex">
+                      <input type="email" class="form-control me-2" placeholder="Enter your email" required>
+                      <button type="submit" class="btn custom-subscribe-btn">Subscribe</button>
+                    </form>
+                  </div>
+                  
+                  <p *ngIf="isSubscribed" class="mt-2 fw-bold" style="color: #716A29;">
+                    Thank you for subscribing!
+                  </p>
             </div>
         </div>
     </div>
@@ -71,3 +77,4 @@
         <p class="mb-0">© 2025 YourCompany. Crafted with ❤️ for a better web.</p>
     </div>
 </footer>
+
