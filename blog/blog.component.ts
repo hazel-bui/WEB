@@ -23,7 +23,7 @@ export class BlogComponent {
     {
       Blog_ID: 1111,
       Blog_Title: 'Pocket These Quick Tips for Cleaning Your Ear Piercings Without Worrying About Bumps',
-      Blog_Image: 'v402_3954.png',
+      Blog_Image: 'Post1.png',
       Blog_Date: 'February 22, 2026',
       Blog_shortDescription: 'Are you passionate about ear piercings but afraid of infection or pus?',
       Blog_Category: 'Service',
@@ -41,7 +41,7 @@ export class BlogComponent {
     {
       Blog_ID: 1112,
       Blog_Title: 'How to Treat Ear Piercing Bumps at Home',
-      Blog_Image: 'v402_3951.png',
+      Blog_Image: 'Post2.png',
       Blog_Date: 'February 20, 2026',
       Blog_shortDescription: 'Ear piercing bumps are common. Learn how to treat them at home for quick healing.',
       Blog_Category: 'Aftercare',
@@ -59,7 +59,7 @@ export class BlogComponent {
     {
       Blog_ID: 1113,
       Blog_Title: 'Rebound Piercing: Revitalizing Your Piercings',
-      Blog_Image: 'v402_3870.png',
+      Blog_Image: 'Post3.png',
       Blog_Date: 'February 18, 2026',
       Blog_shortDescription: 'Have you experienced complications with a piercing?',
       Blog_Category: 'Service',
@@ -73,9 +73,9 @@ export class BlogComponent {
     {
       Blog_ID: 1114,
       Blog_Title: 'Troubled Piercings? Rebound Piercing Offers Expert Solutions for All Your Needs',
-      Blog_Image: 'image-1-1024x787.png',
+      Blog_Image: 'Post4.png',
       Blog_Date: 'February 15, 2026',
-      Blog_shortDescription: ' Local Studio Provides Comprehensive Care for Irritated, Infected, or Migrated Piercings, Emphasizing Safety and Client Well-being',
+      Blog_shortDescription: ' Local studio provides comprehensive care for irritated, infected, or migrated piercings, emphasizing safety and client well-being',
       Blog_Category: 'Service',
       Blog_fullContent: `Local Studio Provides Comprehensive Care for Irritated, Infected, or Migrated Piercings, Emphasizing Safety and Client Well-being\n
       For those experiencing discomfort or complications with their piercings, a new local service is providing relief. Rebound Piercing, a specialized studio dedicated to resolving piercing issues, offers a comprehensive range of solutions for clients facing various challenges. From minor irritations to complex migrations, Rebound Piercing aims to restore comfort and confidence with expert care.\n
@@ -87,7 +87,7 @@ export class BlogComponent {
     {
       Blog_ID: 1115,
       Blog_Title: 'How Long Does an Ear Piercing Take to Heal?',
-      Blog_Image: 'Trai-nghiem-dich-vu-xo-an-toan.jpg',
+      Blog_Image: 'Post5.jpg',
       Blog_Date: 'February 10, 2026',
       Blog_shortDescription: 'Understanding the healing timeline for different types of ear piercings.',
       Blog_Category: 'Aftercare',

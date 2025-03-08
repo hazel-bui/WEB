@@ -9,6 +9,13 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
+  isSubscribed = false;
+
+  subscribe(event: Event) {
+    event.preventDefault(); // Prevent page reload
+    this.isSubscribed = true; // Hide form, show "Thank you"
+  }
+
   socialLinks = [
     { icon: 'facebook', url: '#' },
     { icon: 'instagram', url: '#' },
@@ -21,4 +28,5 @@ export class FooterComponent {
     { name: 'Privacy policy', url: '#' },
     { name: 'Contact', url: '#' }
   ];
+  
 }

@@ -54,10 +54,12 @@
             <h3>Stay Updated</h3>
             <div>Subscribe to our newsletter to get the latest updates.</div>
             <br/>
-            <form class="newsletter-form">
+            <form class="newsletter-form" (submit)="subscribe($event)" *ngIf="!isSubscribed">
                 <input type="email" placeholder="Enter your email" required>
                 <button type="submit">Subscribe</button>
             </form>
+            
+            <p *ngIf="isSubscribed" class="thank-you-message">Thank you for subscribing!</p>            
         </div>
     </div>
 

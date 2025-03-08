@@ -55,7 +55,7 @@ body {
 }
 
 .footer-section p {
-    color: #822020;
+    color: #3A3812;
     line-height: 1.6;
 }
 
@@ -156,6 +156,13 @@ body {
     color: #ECE9C1;
     transform: scale(1.1);
 }
+
+.thank-you-message {
+    color: rgb(255, 253, 253);
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+  }
 
 /* Responsive */
 @media (max-width: 768px) {

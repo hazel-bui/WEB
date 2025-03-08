@@ -1,5 +1,5 @@
 <div class="blog-container">
-  <h1>LATEST ARTICLES</h1>
+  <h1>REBOUND'S ARTICLES</h1>
 
   <!-- Blog List View -->
   <div *ngIf="!selectedPost" class="blog-list">
@@ -60,7 +60,7 @@
 
         <div class="post-content">
           <p>{{ selectedPost.Blog_shortDescription }}</p>
-          <div class="full-content" [innerHTML]="selectedPost?.Blog_fullContent"></div>
+          <div class="full-content" [innerHTML]="selectedPost.Blog_fullContent"></div>
         </div>
       </div>
     </div>
