@@ -2,7 +2,7 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .contact-page-container {
@@ -29,7 +29,7 @@ body {
 }
 
 .map-container {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family:'Montserrat', sans-serif;
   flex: 1;
   min-width: 300px;
   height: 450px;
@@ -37,7 +37,7 @@ body {
 }
 
 .contact-form-container {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family:'Montserrat', sans-serif;
   flex: 1;
   min-width: 300px;
   border: 1px solid #e0e0e0;
@@ -47,7 +47,7 @@ body {
 
 .contact-info h2,
 .form-section h2 {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family:'Montserrat', sans-serif;
   margin-top: 0;
   font-size: 18px;
   font-weight: bold;
@@ -134,18 +134,35 @@ textarea {
 }
 
 .btn-send {
-  background-color: #C9BC9C;
+  background-color: #DDD7C0;
   color: #000;
 }
 
+.btn-send:hover {
+  background-color: #7F7350;
+    color: #ffffff;
+    font-weight: bold; 
+}
 .btn-main {
-  background-color: #C9BC9C;
+  background-color: #DDD7C0;
   color: #000;
   border: none;
 }
 
+.btn-reset:hover{
+  background-color: #7F7350 ;
+    color: #ffffff;
+    font-weight: bold; 
+}
+
+.btn-main:hover{
+  background-color: #7F7350;
+    color: #ffffff;
+    font-weight: bold; 
+}
+
 .btn-reset {
-  background-color: #C9BC9C;
+  background-color: #DDD7C0;
   color: #000;
 }
 

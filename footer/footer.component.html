@@ -1,9 +1,12 @@
-<footer class="footer py-5 border-top border-warning">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<footer class="footer py-5">
     <div class="container">
-        <div class="row">
+        <div class="row gy-4">
             <!-- About Us -->
-            <div class="col-md-3">
-                <h3 class="text-uppercase border-bottom border-warning pb-2">About Us</h3>
+            <div class="col-md-6 col-lg-3 col-12 about-us">
+                <h3 class="text-uppercase pb-2">About Us</h3>
                 <p>Rebound Piercing - online shopping destination for the namesake piercing design brand, offering a wide variety of earrings, nose rings in various materials, and professional piercing services.</p>
                 <div class="d-flex gap-3">
                     <a href="#" class="text-dark"><i class="bi bi-facebook">
@@ -25,28 +28,68 @@
             </div>
 
             <!-- Contact Information -->
-            <div class="col-md-3">
-                <h3 class="text-uppercase border-bottom border-warning pb-2">Contact Us</h3>
-                <p><i class="bi bi-geo-alt-fill text-warning">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
-                        </svg>
-                </i> 24 Ly Tu Trong, Ben Nghe Ward, District 1, Ho Chi Minh City</p>
-                <p><i class="bi bi-envelope-fill text-warning">
+            <div class="col-md-6 col-lg-3 col-12">
+                <h3 class="text-uppercase pb-2">Contact Us</h3>
+                <p class="contact-info"><i class="bi bi-envelope-fill text-warning">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
                         <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
                         </svg>
                 </i> reboundpiercing&#64;example.com</p>
-                <p><i class="bi bi-telephone-fill text-warning">
+                <p class="contact-info"><i class="bi bi-telephone-fill text-warning">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
                         </svg>
                 </i> 1900 609 096</p>
+
+                <div class="contact-container">
+                    <!-- Chi nhánh Hồ Chí Minh -->
+                    <div class="branch">
+                        <h4>Ho Chi Minh brach</h4>
+                        <p class="contact-info">
+                            <i class="bi bi-geo-alt-fill text-warning">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                                  </svg>
+                            </i>
+                            24 Ly Tu Trong, District 1
+                        </p>
+                        <p class="contact-info">
+                            <i class="bi bi-geo-alt-fill text-warning">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                                  </svg>
+                            </i>
+                            123 Nguyen Trai, District 5
+                        </p>
+                    </div>
+                
+                    <!-- Chi nhánh Hà Nội -->
+                    <div class="branch">
+                        <h4>Ha Noi Brach</h4>
+                        <p class="contact-info">
+                            <i class="bi bi-geo-alt-fill text-warning">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                                  </svg>
+                            </i>
+                            98 Hai Ba Trung, Cau Giay District
+                        </p>
+                        <p class="contact-info">
+                            <i class="bi bi-geo-alt-fill text-warning">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                                  </svg>
+                            </i>
+                            45 Hang Bong, Hoan Kiem Ward
+                        </p>
+                    </div>
+                </div>
+            
             </div>
 
             <!-- Quick Links -->
-            <div class="col-md-3">
-                <h3 class="text-uppercase border-bottom border-warning pb-2">Quick Links</h3>
+            <div class="col-md-6 col-lg-3 col-12">
+                <h3 class="text-uppercase pb-2">Quick Links</h3>
                 <ul class="list-unstyled">
                     <li><a href="#" class="text-dark text-decoration-none">Home</a></li>
                     <li><a href="#" class="text-dark text-decoration-none">Blog</a></li>
@@ -56,8 +99,8 @@
             </div>
 
             <!-- Newsletter Subscription -->
-            <div class="col-md-3">
-                <h3 class="text-uppercase border-bottom border-warning pb-2">Stay Updated</h3>
+            <div class="col-md-6 col-lg-3 col-12">
+                <h3 class="text-uppercase pb-2">Stay Updated</h3>
                 <p>Subscribe to our newsletter to get the latest updates.</p>
                 <div *ngIf="!isSubscribed">
                     <form (submit)="subscribe($event)" class="d-flex">
@@ -73,8 +116,8 @@
         </div>
     </div>
 
-    <div class="text-center mt-4 border-top border-custom pt-3">
-        <p class="mb-0">© 2025 YourCompany. Crafted with ❤️ for a better web.</p>
+    <div class="text-center mt-4  pt-3">
+        <p class="mb-0">© 2025 ReboundPiercing. Crafted with ❤️ for a better web.</p>
     </div>
 </footer>
 

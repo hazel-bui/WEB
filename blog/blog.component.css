@@ -1,13 +1,6 @@
-/* 📌 Blog Container */
-.blog-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 30px 20px;
-  border-radius: 20px;
-  background: #ECE9C1;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+body{
+  font-family: 'Montserrat', sans-serif;
 }
-
 /* 📌 Blog Header */
 h1 {
   text-align: center;
@@ -20,31 +13,36 @@ h1 {
 /* 📌 Blog Content Layout */
 .blog-list-content {
   border-radius: 15px;
-  padding: 30px;
+  padding: 10px;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(15px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
+.blog-container {
+  width: 100vw;  /* Chiếm toàn bộ chiều rộng màn hình */
+  max-width: 100%; /* Đảm bảo không bị giới hạn */
+  padding: 10px 30px; /* Giảm padding nếu cần */
+}
+
 
 /* 📌 Sidebar */
 .blog-sidebar-frame {
   border-radius: 15px;
-  padding: 10px;
-  background: linear-gradient(135deg, #E6E2AD, #E6E2AD);
+  border: 4px solid #DDD7C0;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  padding: 20px 20px 90px 20px; /* Tăng padding để mở rộng khoảng cách bên trong */ 
 }
+
 
 /* 📌 Sidebar Items */
 .blog-sidebar-item {
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px;
+  gap: 5px;
+  margin: 8px 1px; 
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .blog-sidebar-item:hover {
@@ -77,6 +75,16 @@ h1 {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+  .card-title{
+    font-size: 30px;
+}
+
+.card-img-top {
+  width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều ngang */
+  height: 400px; /* Điều chỉnh chiều cao theo ý bạn */
+  object-fit: cover; /* Giữ tỷ lệ ảnh đẹp, không bị méo */
+}
+
 .main-article:hover {
   transform: scale(1.03);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -84,7 +92,7 @@ h1 {
 
 .main-article img {
   width: 100%;
-  height: 250px;
+  height: 450px;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
 }
@@ -136,15 +144,16 @@ h1 {
 
 /* 📌 Buttons */
 .btn-primary {
-  background-color: #f3efc1;
-  border-color: #d9d79b;
-  color: #3A3812;
+  border-color: #DDD7C0;
+  background-color: #DDD7C0;
+  color: #000;
   font-weight: bold;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .btn-primary:hover {
-  background-color: #CDC65F;
+  background-color: #7F7350 ;
+  color: #ffffff;
   transform: scale(1.05);
 }
 
@@ -168,6 +177,7 @@ h1 {
     max-height: 300px;
   }
 }
+
 
 @media (max-width: 768px) {
   .blog-container {
@@ -205,4 +215,26 @@ h1 {
   background: rgba(255, 255, 255, 0.9); /* Tạo nền mờ nhẹ để dễ đọc */
   padding: 20px;
   border-radius: 10px;
+}
+
+.blog-sidebar-wrapper {
+  flex: 0 0 35%; /* Mặc định 30%, bạn có thể tăng lên 35% hoặc 40% */
+  max-width: 35%;
+}
+
+.blog-main-content {
+  flex: 0 0 65%; /* Điều chỉnh để phù hợp với sidebar */
+  max-width: 65%;
+}
+
+@media (max-width: 1024px) {
+  .blog-sidebar-wrapper {
+    flex: 0 0 65%;
+    max-width: 65%;
+  }
+  
+  .blog-main-content {
+    flex: 0 0 65%;
+    max-width: 65%;
+  }
 }
