@@ -4,7 +4,7 @@
   margin: 0 auto;
   padding: 30px 20px;
   border-radius: 20px;
-  background:  #ECE9C1;
+  background: #ECE9C1;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -19,8 +19,6 @@ h1 {
 
 /* 📌 Blog Content Layout */
 .blog-list-content {
-  display: flex;
-  gap: 30px;
   border-radius: 15px;
   padding: 30px;
   background: rgba(255, 255, 255, 0.8);
@@ -29,22 +27,11 @@ h1 {
 }
 
 /* 📌 Sidebar */
-.blog-sidebar {
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 .blog-sidebar-frame {
   border-radius: 15px;
-  padding: 5px;
+  padding: 10px;
   background: linear-gradient(135deg, #E6E2AD, #E6E2AD);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  width: 100%;
 }
 
 /* 📌 Sidebar Items */
@@ -66,8 +53,8 @@ h1 {
 }
 
 .blog-sidebar-item img {
-  width: 90px;
-  height: 70px;
+  width: 80px;
+  height: 60px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -81,19 +68,10 @@ h1 {
   text-overflow: ellipsis;
 }
 
-/* 📌 Main Blog Content */
-.blog-main-content {
-  flex-grow: 1;
-}
-
 /* 📌 Article Cards */
 .main-article {
   border-radius: 12px;
   overflow: hidden;
-  min-height: 320px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   background: rgba(255, 255, 255, 0.85);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
@@ -104,20 +82,14 @@ h1 {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.main-article-image {
+.main-article img {
   width: 100%;
   height: 250px;
-  overflow: hidden;
-}
-
-.main-article-image img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
 }
 
-.main-article:hover .main-article-image img {
+.main-article:hover img {
   transform: scale(1.1);
 }
 
@@ -126,23 +98,19 @@ h1 {
 }
 
 .main-article-details h2 {
-  margin: 0 0 15px;
+  margin-bottom: 15px;
   font-size: 1.5rem;
   color: #3A3812;
 }
 
-.main-article-details .blog-date {
+.blog-date {
   color: #716C23;
   font-size: 0.9rem;
 }
 
 /* 📌 Blog Post View */
-.blog-post .blog-list-content {
-  margin-top: 20px;
-}
-
 .post-header h1 {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: bold;
   color: #3A3812;
 }
@@ -154,7 +122,8 @@ h1 {
 
 .post-image {
   width: 100%;
-  height: 400px;
+  height: auto;
+  max-height: 400px;
   margin-bottom: 20px;
 }
 
@@ -165,72 +134,75 @@ h1 {
   border-radius: 12px;
 }
 
-/* 📌 Buttons & Pagination */
-.pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  gap: 12px;
-}
-
-.page-btn,
-.back-btn {
-  background: #f3efc1;
-  border: none;
-  padding: 10px 20px;
+/* 📌 Buttons */
+.btn-primary {
+  background-color: #f3efc1;
+  border-color: #d9d79b;
+  color: #3A3812;
   font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.page-btn:hover,
-.back-btn:hover {
-  background:  #CDC65F;
+.btn-primary:hover {
+  background-color: #CDC65F;
   transform: scale(1.05);
-}
-
-.current-page {
-  background-color: #D9D9D9;
-  padding: 8px 12px;
-  border-radius: 6px;
 }
 
 /* 📌 Responsive Design */
 @media (max-width: 1024px) {
   .blog-list-content {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .blog-sidebar {
-      width: 100%;
-      align-items: center;
+    width: 100%;
+    align-items: center;
   }
 
   .blog-main-content {
-      width: 100%;
-  }
-
-  .main-article-image {
-      height: 220px;
+    width: 100%;
   }
 
   .post-image {
-      height: 300px;
+    max-height: 300px;
   }
 }
 
 @media (max-width: 768px) {
   .blog-container {
-      padding: 30px;
+    padding: 30px;
   }
 
   .post-image {
-      height: 250px;
+    max-height: 250px;
   }
 
   .main-article-details h2 {
-      font-size: 1.3rem;
+    font-size: 1.3rem;
   }
+}
+/* 📌 Đảm bảo ảnh không bị tràn */
+.post-image {
+  width: 100%;
+  max-height: 400px;  /* Giữ ảnh không quá lớn */
+  margin-bottom: 20px; /* Tạo khoảng cách giữa ảnh và chữ */
+  display: flex;
+  justify-content: center; /* Căn giữa ảnh */
+}
+
+.post-image img {
+  width: 100%;
+  height: auto; /* Giữ tỷ lệ gốc của ảnh */
+  object-fit: cover; /* Đảm bảo ảnh lấp đầy khung mà không méo */
+  border-radius: 12px;
+}
+
+/* 📌 Giữ nội dung không bị chồng lên ảnh */
+.post-content {
+  position: relative; /* Đảm bảo nội dung nằm dưới ảnh */
+  z-index: 2; /* Đưa chữ lên trên nếu cần */
+  background: rgba(255, 255, 255, 0.9); /* Tạo nền mờ nhẹ để dễ đọc */
+  padding: 20px;
+  border-radius: 10px;
 }

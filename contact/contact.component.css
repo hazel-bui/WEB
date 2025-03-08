@@ -17,15 +17,15 @@ body {
 }
 
 .breadcrumb a {
-
   color: #3A3812;
   text-decoration: none;
 }
 
 .contact-content {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 20px;
+  align-items: flex-start;
 }
 
 .map-container {
@@ -196,11 +196,14 @@ textarea {
   }
   
   .form-row {
-    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các input xuống hàng nếu không đủ chỗ */
     gap: 15px;
+    margin-bottom: 15px;
   }
   
   .half-width {
-    width: 100%;
+    flex: 1; /* Để 2 input chiếm cùng một hàng */
+    min-width: 150px; /* Đảm bảo không quá nhỏ khi màn hình hẹp */
   }
 }
